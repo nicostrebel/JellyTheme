@@ -2220,8 +2220,9 @@ z-index:3
 
 .layout-desktop .trackSelections {
 font-size:small!important;
-margin-left:50vh;
-margin-top:-10vh;
+margin-left:0vh;
+margin-top:2vh;
+margin-bottom:5vh;
 max-width:27em!important
 }
 
@@ -2234,11 +2235,11 @@ display:none
 }
 
 .layout-desktop .trackSelections .selectContainer .selectLabel {
-margin:0 -1.5em 0 0
+margin:0 -0.5em 0 0
 }
 
 .detailsGroupItem .label,.trackSelections .selectContainer .selectLabel {
-margin:0 -1.4em 0 0
+margin:0 -1em 0 0
 }
 
 .layout-desktop .mainDetailButtons {
