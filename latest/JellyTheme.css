@@ -1,6 +1,8 @@
+
 :root {
 --deftraback:grey!important;
 --rounding:7px;
+--accent:#9e68e3!important;
 }
 
 ::-moz-selection {
@@ -221,7 +223,9 @@ border-radius:var(--rounding) var(--rounding) 0 0!important
 }
 
 .backdropImageFadeIn {
-    animation-delay: 3s;
+    animation-delay: 0s;
+	-webkit-animation: backdrop-fadein .0s ease-in normal both;
+    animation: backdrop-fadein .0s ease-in normal both;
 }
 
 .cardBox:not(.visualCardBox) .cardPadder,.cardContent-shadow {
@@ -353,7 +357,7 @@ width:60vw
     width: 100vw;
     -webkit-mask-image: linear-gradient(to top, transparent, #000000E8);
     margin-top: 0vh;
-    transition: 300ms;
+    transition: 150ms;
     background-position-x: 75%;
 }
 
@@ -449,7 +453,8 @@ display:none!important
 
 .layout-desktop #castContent .card.overflowPortraitCard {
 font-size:90%!important;
-width:7vw!important
+width:12vw!important;
+min-width:120px!important;
 }
 
 .layout-tv #castContent .card.overflowPortraitCard {
@@ -1388,7 +1393,8 @@ width:-webkit-fill-available
 
 .card[data-type="Actor"] .cardText-first {
 bottom:23.5px;
-height:22px;
+height:2vw;
+min-height:25px;
 width:-webkit-fill-available
 }
 
@@ -2062,12 +2068,9 @@ display:block
 display:block!important
 }
 
-.itemName {
-margin:.5em 0!important
-}
-
 .cardText > .textActionButton {
-font-size:1em
+font-size: calc(10px + 0.5vw);
+font-weight: 800
 }
 
 .card[data-type="Actor"] .cardText-secondary {
@@ -2153,11 +2156,6 @@ margin-bottom: 6%;
 
 .layout-desktop .moreFromSeasonSection {
 margin-top:3vh!important
-}
-
-.layout-desktop .trackSelections {
-font-size:small!important;
-max-width:27em!important
 }
 
 .itemTags {
@@ -2561,7 +2559,9 @@ z-index:3;
 
 .layout-desktop .trackSelections {
 font-size:small!important;
-margin-left:50vh;
+margin-left:0vh;
+margin-top:2vh;
+margin-bottom:5vh;
 max-width:27em!important;
 }
 
@@ -2574,11 +2574,11 @@ display:none;
 }
 
 .layout-desktop .trackSelections .selectContainer .selectLabel {
-margin:0 -1.5em 0 0;
+margin:0 -0.5em 0 0;
 }
 
 .detailsGroupItem .label,.trackSelections .selectContainer .selectLabel {
-margin:0 -1.4em 0 0;
+margin:0 -1em 0 0;
 }
 
 .layout-desktop .mainDetailButtons {
