@@ -336,26 +336,23 @@ text-shadow:1px 1px 5px #141414;
 width:60vw
 }
 
-.layout-mobile .infoWrapper {
-    padding-left: 3%;
-}
 .layout-mobile
 .detailPagePrimaryContainer.padded-left.padded-right.detailRibbon {
     align-content: flex-end;
     font-size: 180%;
     justify-content: flex-start;
-    margin-top: 65vh!important;
 }
 .layout-mobile .detailPageSecondaryContainer {
     margin: 0;
-    margin-top: -65vh !important;
 }
 .layout-mobile div#itemBackdrop {
-    width: 100vw;
+    max-width: 100vw !important;
     -webkit-mask-image: linear-gradient(to top, transparent, #000000E8);
     margin-top: 0vh;
     transition: 150ms;
     background-position-x: 75%;
+	min-height: 50vw;
+	display: block !important;
 }
 
 .layout-mobile .itemMiscInfo,.layout-mobile .itemName,.layout-mobile .mainDetailButtons,.layout-mobile .parentName {
@@ -423,8 +420,8 @@ width:100%!important
 }
 
 .layout-mobile .mainDetailButtons {
+grid-gap: 5px;
 flex-shrink:1;
-margin:0 5vh;
 width:50vw!important
 }
 
@@ -531,10 +528,9 @@ z-index:0
 
 .layout-mobile .detailPagePrimaryContainer {
 background:transparent!important;
-height:100vh!important;
 padding:0!important;
 width:100vw!important;
-z-index:-1
+z-index:1
 }
 
 .layout-mobile .primaryImageWrapper {
@@ -544,7 +540,7 @@ flex:0 0 auto
 .layout-mobile .mainDetailButtons {
 flex-flow:row;
 flex-wrap:wrap;
-grid-gap:10px;
+grid-gap:5px;
 height:-webkit-fit-content;
 height:-moz-fit-content;
 height:fit-content;
@@ -570,7 +566,11 @@ grid-gap:5%!important;
 justify-content:flex-start;
 padding:10px!important;
 text-shadow:none;
-width:100%!important
+width: calc(80% - 5px) !important
+}
+
+button.button-flat.btnReplay.detailButton.emby-button {
+width: calc(20% - 5px) !important
 }
 
 .layout-mobile #itemDetailPage .btnPlay::after {
@@ -950,6 +950,12 @@ height:fit-content
 color:var(--accent)!important
 }
 
+
+.layout-mobile .detailsGroupItem .label, .layout-mobile .trackSelections .selectContainer .selectLabel {
+-webkit-flex-basis: 100px;
+flex-basis: 100px;
+}
+
 .listItemIcon.notifications {
 font-size:2em
 }
@@ -1042,6 +1048,43 @@ width:calc(33.333333333333336% - 10px)
 @media (min-width: 43.75em) {
 .portraitCard,.squareCard {
 width:calc(25% - 10px)
+}
+}
+
+@media (max-width: 32em) {
+.layout-mobile #itemDetailPage .detailLogo {
+margin-left: 7ve
+}
+}
+
+@media (min-width: 32em) {
+.layout-mobile #itemDetailPage .detailLogo {
+margin-left: 3vw
+}
+}
+
+@media (max-width: 32em) {
+.layout-mobile .infoWrapper {
+	padding-left: 7vw
+}
+}
+
+@media (min-width: 32em) {
+.layout-mobile .infoWrapper {
+	padding-left: 3vw
+}
+}
+@media (max-width: 32em) {
+.layout-mobile .mainDetailButtons {
+padding-left: 7vw;
+padded-right: 7vw
+}
+}
+
+@media (min-width: 32em) {
+.layout-mobile .mainDetailButtons {
+padding-left: 3vw;
+padded-right: 3vw
 }
 }
 
@@ -2411,8 +2454,7 @@ z-index:-3;
 
 .layout-mobile #itemDetailPage .detailLogo {
 display:block!important;
-margin-bottom:-50%!important;
-margin-top:11%;
+margin-top:-40vw !important;
 min-width:80%!important;
 z-index:5!important;
 }
